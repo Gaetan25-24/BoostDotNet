@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2CC7064-7988-4C02-B208-DCFE7910C471}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestionConger</RootNamespace>
+    <AssemblyName>GestionConger</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.0.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 9.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Conge.cs" />
+    <Compile Include="Class\ModelService.cs" />
+    <Compile Include="Class\Personne.cs" />
+    <Compile Include="Class\Service.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaireMain\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaireMain\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\Acceuil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\Acceuil.Designer.cs">
+      <DependentUpon>Acceuil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\DemandeAccepter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\DemandeAccepter.Designer.cs">
+      <DependentUpon>DemandeAccepter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\DemandeEnCours.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\DemandeEnCours.Designer.cs">
+      <DependentUpon>DemandeEnCours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\DemandeRefuser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\DemandeRefuser.Designer.cs">
+      <DependentUpon>DemandeRefuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\DemandeSigne.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\DemandeSigne.Designer.cs">
+      <DependentUpon>DemandeSigne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\DemandeVisé.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\DemandeVisé.Designer.cs">
+      <DependentUpon>DemandeVisé.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\FormConge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\FormConge.Designer.cs">
+      <DependentUpon>FormConge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\FormConsultation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\FormConsultation.Designer.cs">
+      <DependentUpon>FormConsultation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\FormDemande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\FormDemande.Designer.cs">
+      <DependentUpon>FormDemande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\FormModification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\FormModification.Designer.cs">
+      <DependentUpon>FormModification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\FormService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\FormService.Designer.cs">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\ListePersonne.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\ListePersonne.Designer.cs">
+      <DependentUpon>ListePersonne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\ModifierPwd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\ModifierPwd.Designer.cs">
+      <DependentUpon>ModifierPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\Moncompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\Moncompte.Designer.cs">
+      <DependentUpon>Moncompte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulairePanel\TousDemandes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormulairePanel\TousDemandes.Designer.cs">
+      <DependentUpon>TousDemandes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\AddDemande.cs" />
+    <Compile Include="Class\Connection.cs" />
+    <Compile Include="Gestion\GestionConge.cs" />
+    <Compile Include="Gestion\GestionSalarier.cs" />
+    <Compile Include="Gestion\GestionService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulaireMain\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\Acceuil.resx">
+      <DependentUpon>Acceuil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\DemandeAccepter.resx">
+      <DependentUpon>DemandeAccepter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\DemandeEnCours.resx">
+      <DependentUpon>DemandeEnCours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\DemandeRefuser.resx">
+      <DependentUpon>DemandeRefuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\DemandeSigne.resx">
+      <DependentUpon>DemandeSigne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\DemandeVisé.resx">
+      <DependentUpon>DemandeVisé.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\FormConge.resx">
+      <DependentUpon>FormConge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\FormConsultation.resx">
+      <DependentUpon>FormConsultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\FormDemande.resx">
+      <DependentUpon>FormDemande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\FormModification.resx">
+      <DependentUpon>FormModification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\FormService.resx">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\ListePersonne.resx">
+      <DependentUpon>ListePersonne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\ModifierPwd.resx">
+      <DependentUpon>ModifierPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\Moncompte.resx">
+      <DependentUpon>Moncompte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulairePanel\TousDemandes.resx">
+      <DependentUpon>TousDemandes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
